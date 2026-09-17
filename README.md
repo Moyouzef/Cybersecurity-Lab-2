@@ -195,6 +195,27 @@ By completing Week 2, I gained practical experience in:
 * Understanding how reconnaissance supports penetration testing
 * Recognizing the importance of conducting security testing only against authorized targets
 
+* ### Challenges Faced During My Reconnaissance Practice
+
+During my Week 2 reconnaissance practice in Kali Linux, I faced a few technical challenges that gave me an opportunity to troubleshoot and improve my practical skills.
+
+**1. Copying the Reconnaissance Report from Kali Linux to My Host Machine**
+One of the main challenges I experienced was transferring my reconnaissance report from the Kali Linux virtual machine to my Mac host machine. Since Kali Linux was running inside VirtualBox, copying and pasting text directly between the virtual machine and the host was not working properly. I tried enabling the VirtualBox shared clipboard and checking the relevant settings, but the issue continued.
+
+This challenge helped me understand the importance of finding alternative methods for transferring files between a virtual machine and the host system. It also encouraged me to troubleshoot VirtualBox integration and look at other ways of exporting and accessing my reports.
+
+**2. `curl -I` Command Did Not Work as Expected**
+Another challenge was using the `curl -I` command during the reconnaissance process. The command did not work as expected when I attempted to retrieve the HTTP response headers from the target website.
+
+I had to investigate possible causes, including network connectivity, the target website's configuration, and whether the required tools and commands were functioning correctly in my Kali Linux environment. This helped me understand that reconnaissance tools do not always produce results immediately and that troubleshooting is an important part of penetration-testing practice.
+
+### What I Learned from These Challenges
+
+These challenges taught me that practical cybersecurity work involves more than simply running commands. Understanding the environment, troubleshooting errors, checking configurations, and finding alternative solutions are important skills for a penetration tester.
+
+Although I faced difficulties, they gave me valuable hands-on experience and increased my confidence in working with Kali Linux, VirtualBox, and reconnaissance tools. I look forward to building on these skills in the next stages of my internship.
+
+
 ## Conclusion
 
 Completing Week 2 has given me a stronger foundation in **web reconnaissance and information gathering**.
