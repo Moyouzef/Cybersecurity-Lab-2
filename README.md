@@ -101,6 +101,51 @@ A website may have additional security layers such as:
 * Rate limiting
 * Other security controls
 
+## 4. **curl -I — HTTP Header Analysis**
+
+Another command I practiced was:
+
+curl -I https://networkwalks.com
+
+The -I option requests the HTTP response headers rather than downloading the complete webpage.
+
+This allowed me to examine information such as:
+
+HTTP status codes
+Server information, when exposed
+Content type
+Redirects
+Security-related headers
+Cache information
+Other HTTP response headers
+
+For example, a response such as:
+
+HTTP/2 200
+
+indicates that the request was successfully processed.
+
+A response such as:
+
+HTTP/2 301
+Location: https://www.networkwalks.com/
+
+indicates that the requested URL redirects to another location.
+
+This exercise helped me understand how HTTP communication works and how response headers can provide useful information during reconnaissance.
+
+##5. **nslookup — DNS Reconnaissance**
+
+I also learned how to use nslookup to investigate the DNS information associated with a domain.
+
+DNS is responsible for translating domain names into IP addresses and helping different services locate each other on a network.
+
+Example:
+
+nslookup networkwalks.com
+
+Using this command, I learned how to identify the IP address associated with a domain and examine the DNS server responding to the query.
+
 Understanding these layers is important during the reconnaissance stage of a penetration test.
 
 ---
@@ -109,11 +154,11 @@ Understanding these layers is important during the reconnaissance stage of a pen
 
 During this week's project, I followed a basic reconnaissance workflow.
 
-### Step 1 — Identify the Domain
+### Identify the Domain
 
 I started with the target domain and established the basic information needed for the assessment.
 
-### Step 2 — Perform WHOIS Reconnaissance
+### Step 1 — Perform WHOIS Reconnaissance
 
 I used WHOIS to gather publicly available domain and registration information.
 
@@ -123,7 +168,7 @@ whois networkwalks.com
 
 I reviewed the results and recorded useful information for my report.
 
-### Step 3 — Fingerprint the Website
+### Step 2 — Fingerprint the Website
 
 Next, I used WhatWeb to identify technologies associated with the website.
 
@@ -132,7 +177,15 @@ whatweb Networkwalks.com
 
 I examined the output and documented the technologies identified by the tool.
 
-### Step 4 — Check for WAF Protection
+### Step 3 — nslookup
+
+I investigated DNS information and identified IP addresses and other relevant DNS records.
+
+### Step 4 — curl -I
+
+I examined HTTP response headers to understand how the web server responded to requests.
+
+### Step 5 — Check for WAF Protection
 
 I then used WAFW00F to investigate whether the website appeared to be protected by a Web Application Firewall.
 
@@ -141,7 +194,7 @@ wafw00f Networkwalks.com
 
 I recorded the results and considered how the presence or absence of a WAF could affect the next stages of an authorized security assessment.
 
-### Step 5 — Collect and Document Results
+### Step 6 — Collect and Document Results
 
 Finally, I organized the information collected from the different tools and prepared it for reporting.
 
